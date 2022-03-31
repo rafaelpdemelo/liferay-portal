@@ -24,7 +24,7 @@ function formatAutocompleteValue(data) {
 function isEmailAddressValid(email) {
 	const emailRegex = /.+@.+\..+/i;
 
-	return emailRegex.test(email);
+	return emailRegex.test(email.label);
 }
 
 function formatAutocompleteUsersFromRequest(resource, inputValue) {
@@ -95,17 +95,17 @@ const Email = ({
 											);
 										}
 
-										if (
-											!!newItems.length &&
-											isEmailAddressValid(
-												newItems[newItems.length - 1]
-													?.label
-											)
-										) {
-											emailContent.current.addresses = newItems;
+										const itensLabelValid = newItems.filter(
+											isEmailAddressValid
+										);
+
+										console.log(newItems);
+
+										if (itensLabelValid.length) {
+											emailContent.current.addresses = itensLabelValid;
 
 											return onMultiSelectItemsChanged(
-												newItems
+												itensLabelValid
 											);
 										}
 									}}
