@@ -3,6 +3,10 @@
 	padding: 0;
 }
 
+.modal-dialog.modal-sm.modal-dialog-centered:focus-visible {
+	outline: none;
+}
+
 .modal-dialog {
 	&:not(.dialog-iframe-modal):not(.modal-full-screen) {
 		position: relative;
