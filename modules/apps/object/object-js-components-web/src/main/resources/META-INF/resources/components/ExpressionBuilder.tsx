@@ -159,7 +159,7 @@ export function ExpressionBuilderModal({sidebarElements}: IModalProps) {
 	};
 
 	return (
-		<ClayModal observer={observer} size="lg">
+		<ClayModal observer={observer} size="lg" id='modal-expression-builder'>
 			<ClayModal.Header>
 				{Liferay.Language.get('expression-builder')}
 			</ClayModal.Header>
