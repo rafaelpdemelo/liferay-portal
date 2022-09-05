@@ -160,7 +160,6 @@ export function ExpressionBuilderModal({sidebarElements}: IModalProps) {
 
 	return (
 		<ClayModal
-			className="lfr-objects__expression-builder-modal"
 			observer={observer}
 			size="lg"
 		>
